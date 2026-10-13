@@ -1,0 +1,6 @@
+{
+  "name": "Centro Médico Bandera",
+  "description": "Centro médico y dental en Bandera 642, Santiago Centro. Medicina General FONASA Nivel 1, 14 especialidades, abierto sábados. Agenda tu hora online o por WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

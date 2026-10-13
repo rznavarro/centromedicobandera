@@ -1,0 +1,1473 @@
+<!doctype html>
+<html lang="es-CL">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Centro Médico Bandera | Médicos y dentistas en Santiago Centro</title>
+    <meta
+      name="description"
+      content="Centro médico y dental en Bandera 642, Santiago Centro. Medicina General FONASA Nivel 1, 14 especialidades, abierto sábados. Agenda tu hora online o por WhatsApp."
+    />
+    <meta property="og:title" content="Centro Médico Bandera — Tu salud, nuestra bandera" />
+    <meta
+      property="og:description"
+      content="Centro médico y dental en Bandera 642, Santiago Centro. Medicina General FONASA Nivel 1, 14 especialidades, abierto sábados. Agenda tu hora online o por WhatsApp."
+    />
+    <meta property="og:image" content="https://centromedicobandera.cl/wp-content/uploads/medicina_home.jpg" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/jpeg" href="https://centromedicobandera.cl/wp-content/uploads/cropped-LOGO_CMDB-270x270.jpg" />
+
+    <!-- Google Fonts: Plus Jakarta Sans (600, 700, 800) and Inter (400, 500, 600) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brandPrimary: '#43AFE6',
+              brandSecondary: '#5577CE',
+              brandAccent: '#8BCA99',
+              brandSupport: '#70ACE2',
+              brandBg: '#FFFFFF',
+              brandBgAlt: '#F4F4F4',
+              brandText: '#484848'
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['"Plus Jakarta Sans"', 'sans-serif']
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- Structured Data JSON-LD (MedicalClinic) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalClinic",
+      "name": "Centro Médico Bandera",
+      "url": "https://centromedicobandera.cl",
+      "image": "https://centromedicobandera.cl/wp-content/uploads/medicina_home.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bandera 642, 4to Piso",
+        "addressLocality": "Santiago",
+        "addressRegion": "Región Metropolitana",
+        "addressCountry": "CL"
+      },
+      "telephone": "+56974102135",
+      "email": "contacto@centromedicobandera.cl",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "19:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "14:00"
+        }
+      ],
+      "medicalSpecialty": [
+        "GeneralPractice",
+        "Dentistry",
+        "Dermatology",
+        "Gastroenterology",
+        "Cardiovascular",
+        "Otolaryngologic",
+        "Gynecologic",
+        "DietNutrition",
+        "Urologic",
+        "Renal",
+        "Psychiatric",
+        "Endocrine"
+      ],
+      "sameAs": [
+        "https://www.instagram.com/centromedicobandera",
+        "https://www.facebook.com/centromedicobandera",
+        "https://www.tiktok.com/@centromedicobandera"
+      ]
+    }
+    </script>
+
+    <style>
+      :root {
+        --color-primary: #43AFE6;
+        --color-secondary: #5577CE;
+        --color-accent: #8BCA99;
+        --color-support: #70ACE2;
+        --color-bg: #FFFFFF;
+        --color-bg-alt: #F4F4F4;
+        --color-text: #484848;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        font-family: 'Inter', sans-serif;
+        color: #484848;
+        background-color: #FFFFFF;
+      }
+
+      body {
+        padding-bottom: 76px;
+      }
+      @media (min-width: 768px) {
+        body {
+          padding-bottom: 0px;
+        }
+      }
+
+      h1, h2, h3, .font-heading {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        letter-spacing: -0.02em;
+        line-height: 1.05;
+      }
+
+      /* Hero Animation */
+      .hero-line-inner {
+        transform: translateY(100%);
+        animation: heroLineRise 0.9s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+      }
+      .hero-line-inner.delay-1 {
+        animation-delay: 0.08s;
+      }
+
+      .hero-giant-word {
+        opacity: 0;
+        transform: translateY(40%);
+        animation: giantRise 0.9s cubic-bezier(0.76, 0, 0.24, 1) 0.15s forwards;
+      }
+
+      @keyframes heroLineRise {
+        to {
+          transform: translateY(0%);
+        }
+      }
+
+      @keyframes giantRise {
+        to {
+          opacity: 1;
+          transform: translateY(0%);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .hero-line-inner {
+          animation: none !important;
+          transform: translateY(0%) !important;
+        }
+        .hero-giant-word {
+          animation: none !important;
+          opacity: 1 !important;
+          transform: translateY(0%) !important;
+        }
+      }
+
+      /* Diagonal mask for Nosotros photo */
+      .mask-diagonal {
+        clip-path: polygon(0 0, 88% 0, 100% 100%, 10% 100%);
+      }
+
+      /* Specialties Index Row Hover Animation (fills bottom to top with 15% #43AFE6) */
+      .spec-row {
+        position: relative;
+        overflow: hidden;
+        border-bottom: 1px solid rgba(72, 72, 72, 0.12);
+        transition: border-color 0.3s;
+      }
+      .spec-row::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(67, 175, 230, 0.15);
+        transform: translateY(100%);
+        transition: transform 0.38s cubic-bezier(0.25, 1, 0.5, 1);
+        z-index: 0;
+      }
+      .spec-row:hover::before {
+        transform: translateY(0);
+      }
+      .spec-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Expandable Cards on desktop */
+      @media (min-width: 1024px) {
+        .expand-card {
+          flex: 1;
+          transition: flex 400ms cubic-bezier(0.25, 1, 0.5, 1), transform 300ms ease;
+        }
+        .expand-card:hover {
+          flex: 1.35;
+        }
+      }
+
+      /* Header Scrolled state */
+      .header-scrolled {
+        background-color: rgba(255, 255, 255, 0.85) !important;
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        border-bottom: 1px solid rgba(72, 72, 72, 0.12) !important;
+      }
+
+      /* Interactive Hover Lift */
+      .hover-lift {
+        transition: transform 0.2s ease;
+      }
+      .hover-lift:hover {
+        transform: translateY(-2px);
+      }
+    </style>
+  </head>
+  <body class="bg-brandBg text-brandText antialiased selection:bg-[#43AFE6] selection:text-white">
+    <!-- Scroll Progress Bar -->
+    <div
+      id="scroll-progress"
+      class="fixed top-0 left-0 h-[3px] bg-brandPrimary z-50 pointer-events-none transition-all duration-75"
+      style="width: 0%;"
+      aria-hidden="true"
+    ></div>
+
+    <!-- Header (Fijo) -->
+    <header
+      id="main-header"
+      class="fixed top-0 left-0 right-0 z-40 bg-transparent transition-all duration-300 border-b border-transparent"
+    >
+      <div class="max-w-[1200px] mx-auto px-5 h-16 md:h-20 flex items-center justify-between">
+        <!-- Logo -->
+        <a href="#" class="flex items-center" aria-label="Centro Médico Bandera - Inicio">
+          <img
+            src="/logo/logo-bandera.png"
+            onerror="this.onerror=null; this.src='https://centromedicobandera.cl/wp-content/uploads/CMB-H-PNG.png';"
+            alt="Logo Centro Médico Bandera"
+            class="h-[38px] sm:h-[40px] md:h-[52px] w-auto object-contain"
+          />
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8" aria-label="Navegación principal">
+          <a href="#especialidades" class="text-base font-medium text-brandText hover:text-brandSecondary transition-colors">
+            Especialidades
+          </a>
+          <a href="#nosotros" class="text-base font-medium text-brandText hover:text-brandSecondary transition-colors">
+            Nosotros
+          </a>
+          <a href="#ubicacion" class="text-base font-medium text-brandText hover:text-brandSecondary transition-colors">
+            Ubicación
+          </a>
+          <a href="#contacto" class="text-base font-medium text-brandText hover:text-brandSecondary transition-colors">
+            Contacto
+          </a>
+        </nav>
+
+        <!-- Header CTA Button -->
+        <div class="flex items-center">
+          <a
+            href="https://centromedicobandera.cl/reservo-especialidades-medicas/"
+            class="hover-lift inline-flex items-center justify-center bg-brandSecondary text-white font-bold text-base px-5 py-2.5 rounded-full shadow-none transition-transform"
+          >
+            Agendar hora
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ==========================================
+           SECCIÓN 1 — HERO «Elige y agenda»
+           ========================================== -->
+      <section
+        id="hero"
+        class="relative bg-brandBg pt-20 md:pt-28 pb-12 md:pb-16 overflow-hidden"
+      >
+        <div class="max-w-[1200px] mx-auto px-5 w-full relative z-10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            <!-- Columna Izquierda (7 cols desktop) -->
+            <div class="lg:col-span-7 flex flex-col pt-1 sm:pt-2">
+              <!-- Etiqueta pequeña -->
+              <div class="inline-flex items-center gap-2 mb-2 sm:mb-3">
+                <svg
+                  class="w-4 h-4 text-brandSecondary shrink-0"
+                  fill="none"
+                  stroke="#5577CE"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                </svg>
+                <span class="text-xs sm:text-sm font-medium text-brandText">
+                  Bandera 642, 4° piso · Santiago Centro
+                </span>
+              </div>
+
+              <!-- H1 con line-mask -->
+              <h1 class="text-[34px] sm:text-[44px] md:text-[56px] lg:text-[68px] font-extrabold text-brandText tracking-tight mb-3 sm:mb-4 leading-[1.05]">
+                <span class="block overflow-hidden">
+                  <span class="hero-line-inner block">Tu salud,</span>
+                </span>
+                <span class="block overflow-hidden">
+                  <span class="hero-line-inner delay-1 block">nuestra bandera.</span>
+                </span>
+              </h1>
+
+              <!-- Bajada -->
+              <p class="text-base sm:text-lg text-brandText mb-5 sm:mb-6 max-w-xl leading-relaxed">
+                Atención médica y dental en un solo lugar, con especialistas nacionales y extranjeros.
+              </p>
+
+              <!-- Etiquetas / Beneficios destacados -->
+              <div class="flex flex-wrap items-center gap-2 mb-6 sm:mb-8">
+                <span class="bg-brandAccent text-brandText text-xs sm:text-sm font-semibold px-3 py-1 rounded-full">
+                  Abierto los sábados
+                </span>
+                <span class="bg-brandAccent text-brandText text-xs sm:text-sm font-semibold px-3 py-1 rounded-full">
+                  Con o sin RUT
+                </span>
+                <span class="bg-[rgba(67,175,230,0.15)] text-brandText text-xs sm:text-sm font-semibold px-3 py-1 rounded-full border border-[rgba(72,72,72,0.10)]">
+                  FONASA Nivel 1 en Medicina General
+                </span>
+                <span class="bg-[rgba(67,175,230,0.15)] text-brandText text-xs sm:text-sm font-semibold px-3 py-1 rounded-full border border-[rgba(72,72,72,0.10)]">
+                  Odontología evaluación costo cero
+                </span>
+              </div>
+
+              <!-- CTA buttons -->
+              <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-4">
+                <a
+                  href="https://centromedicobandera.cl/reservo-especialidades-medicas/"
+                  class="hover-lift inline-flex items-center justify-center bg-brandSecondary text-white font-bold text-base px-7 py-3.5 rounded-full transition-transform text-center"
+                >
+                  Agendar hora
+                </a>
+                <a
+                  href="https://wa.me/56974102135?text=Hola%20Centro%20M%C3%A9dico%20Bandera%2C%20quiero%20agendar%20una%20hora"
+                  class="hover-lift inline-flex items-center justify-center gap-2 bg-brandAccent text-brandText font-bold text-base px-6 py-3.5 rounded-full transition-transform text-center"
+                >
+                  <svg class="w-5 h-5 shrink-0" fill="none" stroke="#484848" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
+                  </svg>
+                  Escribir por WhatsApp
+                </a>
+              </div>
+
+              <!-- Enlace de texto: Ver las 14 especialidades ↓ -->
+              <div>
+                <a
+                  href="#especialidades"
+                  class="inline-flex items-center gap-1.5 text-sm font-semibold text-brandSecondary hover:text-brandPrimary transition-colors py-1"
+                >
+                  Ver las 14 especialidades
+                  <svg class="w-4 h-4" fill="none" stroke="#5577CE" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Columna Derecha: Imagen de salud (5 cols desktop) -->
+            <div class="lg:col-span-5 flex flex-col justify-center">
+              <div class="relative w-full rounded-[14px] overflow-hidden border border-[rgba(72,72,72,0.10)] bg-white shadow-none">
+                <img
+                  src="/images/hero-salud.jpg"
+                  alt="Consulta y atención de salud en Centro Médico Bandera"
+                  class="w-full h-[280px] sm:h-[360px] lg:h-[420px] object-cover"
+                  width="800"
+                  height="600"
+                />
+                <div class="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 bg-white/95 backdrop-blur-md rounded-xl p-3 sm:p-3.5 border border-[rgba(72,72,72,0.10)] flex items-center justify-between">
+                  <div class="flex items-center gap-2.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-brandAccent shrink-0"></span>
+                    <span class="text-xs sm:text-sm font-bold text-brandText">Atención médica y dental integral</span>
+                  </div>
+                  <span class="text-xs font-semibold text-brandSecondary shrink-0">Santiago Centro</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           SECCIÓN 2 — ESPECIALIDADES (lista índice)
+           ========================================== -->
+      <section id="especialidades" class="bg-brandBgAlt py-16 sm:py-24">
+        <div class="max-w-[1200px] mx-auto px-5">
+          <div class="max-w-3xl mb-10 sm:mb-14">
+            <span class="text-xs sm:text-sm font-semibold text-brandSecondary tracking-wider uppercase mb-2 block">
+              Catálogo de atención
+            </span>
+            <h2 class="text-[30px] sm:text-[42px] md:text-[54px] font-extrabold text-brandText tracking-tight mb-4 leading-[1.08]">
+              Nuestras especialidades médicas y odontológicas
+            </h2>
+            <p class="text-base sm:text-lg text-brandText leading-relaxed">
+              Encuentra la atención que necesitas de forma directa y sin esperas. Haz clic en cualquiera para abrir la agenda oficial.
+            </p>
+          </div>
+
+          <!-- Lista de 14 filas en 2 columnas en desktop (7 y 7) -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-12">
+            <!-- Columna 1: 01 a 07 -->
+            <div class="flex flex-col border-t border-[rgba(72,72,72,0.12)]">
+              <!-- 01 Medicina General -->
+              <a
+                href="https://centromedicobandera.cl/reservo-especialidades-medicas/"
+                class="spec-row block py-4 sm:py-5 px-3 -mx-3 transition-colors group"
+              >
+                <div class="spec-content flex items-start justify-between gap-4">
+                  <div class="flex items-start gap-4">
+                    <span class="font-heading font-extrabold text-lg sm:text-xl text-brandSecondary shrink-0 pt-0.5">
+                      01
+                    </span>
+                    <div>
+                      <div class="flex items-center gap-2 flex-wrap mb-1">
+                        <h3 class="font-heading font-bold text-xl sm:text-[22px] text-brandText">
+                          Medicina General
+                        </h3>
+                        <span class="bg-brandAccent text-brandText text-xs font-semibold px-2 py-0.5 rounded-full">
+                          FONASA Nivel 1
+                        </span>
+                      </div>
+                      <p class="text-sm sm:text-base text-brandText opacity-90 leading-normal">
+                        Médicos Generales FONASA Nivel 1 y Particular. Salud integral, prevención y cuidado.
+                      </p>
+                    </div>
+                  </div>
+                  <svg class="w-5 h-5 text-brandSecondary shrink-0 mt-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="#5577CE" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </div>
+              </a>
+
+              <!-- 02 Odontología -->
+              <a
+                href="https://centromedicobandera.cl/agenda-tu-hora-dental/"
+                class="spec-row block py-4 sm:py-5 px-3 -mx-3 transition-colors group"
+              >
+                <div class="spec-content flex items-start justify-between gap-4">
+                  <div class="flex items-start gap-4">
+                    <span class="font-heading font-extrabold text-lg sm:text-xl text-brandSecondary shrink-0 pt-0.5">
+                      02
+                    </span>
+                    <div>
+                      <div class="flex items-center gap-2 flex-wrap mb-1">
+                        <h3 class="font-heading font-bold text-xl sm:text-[22px] text-brandText">
+                          Odontología
+                        </h3>
+                        <span class="bg-brandAccent text-brandText text-xs font-semibold px-2 py-0.5 rounded-full">
+                          Evaluación costo cero
+                        </span>
+                      </div>
+                      <p class="text-sm sm:text-base text-brandText opacity-90 leading-normal mb-2">
+                        Salud dental integral, tratamientos, prevención y cuidado. Evaluación costo cero.
+                      </p>
+                      <p class="text-xs sm:text-sm text-brandText opacity-75 leading-relaxed">
+                        Endodoncia · Ortodoncia · Cirugía Dental · Periodoncia · Odontopediatría · Rehabilitación Oral · Radiología · Estética Dental · Armonización Orofacial
+                      </p>
+                    </div>
+                  </div>
+                  <svg class="w-5 h-5 text-brandSecondary shrink-0 mt-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="#5577CE" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </div>
+              </a>
+
+              <!-- 03 Dermatología -->
+              <a
+                href="https://centromedicobandera.cl/reservo-especialidades-medicas/"
+                class="spec-row block py-4 sm:py-5 px-3 -mx-3 transition-colors group"
+              >
+                <div class="spec-content flex items-start justify-between gap-4">
+                  <div class="flex items-start gap-4">
+                    <span class="font-heading font-extrabold text-lg sm:text-xl text-brandSecondary shrink-0 pt-0.5">
+                      03
+                    </span>
+                    <div>
+                      <h3 class="font-heading font-bold text-xl sm:text-[22px] text-brandText mb-1">
+                        Dermatología
+                      </h3>
+                      <p class="text-sm sm:text-base text-brandText opacity-90 leading-normal">
+                        Atención dermatológica y capilar para el cuidado de tu piel.
+                      </p>
+                    </div>
+                  </div>
+                  <svg class="w-5 h-5 text-brandSecondary shrink-0 mt-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="#5577CE" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </div>
+              </a>
+
+              <!-- 04 Gastroenterología -->
+              <a
+                href="https://centromedicobandera.cl/reservo-especialidades-medicas/"
+                class="spec-row block py-4 sm:py-5 px-3 -mx-3 transition-colors group"
+              >
+                <div class="spec-content flex items-start justify-between gap-4">
+                  <div class="flex items-start gap-4">
+                    <span class="font-heading font-extrabold text-lg sm:text-xl text-brandSecondary shrink-0 pt-0.5">
+                      04
+                    </span>
+                    <div>
+                      <h3 class="font-heading font-bold text-xl sm:text-[22px] text-brandText mb-1">
+                        Gastroenterología
+                      </h3>
+                      <p class="text-sm sm:text-base text-brandText opacity-90 leading-normal">
+                        Orientación y atención para tu salud digestiva.
+                      </p>
+                    </div>
+                  </div>
+                  <svg class="w-5 h-5 text-brandSecondary shrink-0 mt-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="#5577CE" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </div>
+              </a>
+
+              <!-- 05 Cardiología -->
+              <a
+                href="https://centromedicobandera.cl/reservo-especialidades-medicas/"
+                class="spec-row block py-4 sm:py-5 px-3 -mx-3 transition-colors group"
+              >
+                <div class="spec-content flex items-start justify-between gap-4">
+                  <div class="flex items-start gap-4">
+                    <span class="font-heading font-extrabold text-lg sm:text-xl text-brandSecondary shrink-0 pt-0.5">
+                      05
+                    </span>
+                    <div>
+                      <h3 class="font-heading font-bold text-xl sm:text-[22px] text-brandText mb-1">
+                        Cardiología
+                      </h3>
+                      <p class="text-sm sm:text-base text-brandText opacity-90 leading-normal">
+                        Cuidado y prevención para la salud de tu corazón.
+                      </p>
+                    </div>
+                  </div>
+                  <svg class="w-5 h-5 text-brandSecondary shrink-0 mt-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="#5577CE" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </div>
+              </a>
+
+              <!-- 06 Otorrinolaringología -->
+              <a
+                href="https://centromedicobandera.cl/reservo-especialidades-medicas/"
+                class="spec-row block py-4 sm:py-5 px-3 -mx-3 transition-colors group"
+              >
+                <div class="spec-content flex items-start justify-between gap-4">
+                  <div class="flex items-start gap-4">
+                    <span class="font-heading font-extrabold text-lg sm:text-xl text-brandSecondary shrink-0 pt-0.5">
+                      06
+                    </span>
+                    <div>
+                      <h3 class="font-heading font-bold text-xl sm:text-[22px] text-brandText mb-1">
+                        Otorrinolaringología
+                      </h3>
+                      <p class="text-sm sm:text-base text-brandText opacity-90 leading-normal">
+                        Evaluación de molestias respiratorias, auditivas y de la voz.
+                      </p>
+                    </div>
+                  </div>
+                  <svg class="w-5 h-5 text-brandSecondary shrink-0 mt-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="#5577CE" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </div>
+              </a>
+
+              <!-- 07 Ginecología -->
+              <a
+                href="https://centromedicobandera.cl/reservo-especialidades-medicas/"
+                class="spec-row block py-4 sm:py-5 px-3 -mx-3 transition-colors group"
+              >
+                <div class="spec-content flex items-start justify-between gap-4">
+                  <div class="flex items-start gap-4">
+                    <span class="font-heading font-extrabold text-lg sm:text-xl text-brandSecondary shrink-0 pt-0.5">
+                      07
+                    </span>
+                    <div>
+                      <h3 class="font-heading font-bold text-xl sm:text-[22px] text-brandText mb-1">
+                        Ginecología
+                      </h3>
+                      <p class="text-sm sm:text-base text-brandText opacity-90 leading-normal">
+                        Evaluación y prevención para la salud femenina.
+                      </p>
+                    </div>
+                  </div>
+                  <svg class="w-5 h-5 text-brandSecondary shrink-0 mt-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="#5577CE" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </div>
+              </a>
+            </div>
+
+            <!-- Columna 2: 08 a 14 -->
+            <div class="flex flex-col border-t border-[rgba(72,72,72,0.12)] lg:border-t">
+              <!-- 08 Ecografía ginecológica -->
+              <a
+                href="https://centromedicobandera.cl/reservo-especialidades-medicas/"
+                class="spec-row block py-4 sm:py-5 px-3 -mx-3 transition-colors group"
+              >
+                <div class="spec-content flex items-start justify-between gap-4">
+                  <div class="flex items-start gap-4">
+                    <span class="font-heading font-extrabold text-lg sm:text-xl text-brandSecondary shrink-0 pt-0.5">
+                      08
+                    </span>
+                    <div>
+                      <h3 class="font-heading font-bold text-xl sm:text-[22px] text-brandText mb-1">
+                        Ecografía ginecológica
+                      </h3>
+                      <p class="text-sm sm:text-base text-brandText opacity-90 leading-normal">
+                        Imágenes claras, diagnósticos precisos.
+                      </p>
+                    </div>
+                  </div>
+                  <svg class="w-5 h-5 text-brandSecondary shrink-0 mt-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="#5577CE" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </div>
+              </a>
+
+              <!-- 09 Nutrición -->
+              <a
+                href="https://centromedicobandera.cl/reservo-especialidades-medicas/"
+                class="spec-row block py-4 sm:py-5 px-3 -mx-3 transition-colors group"
+              >
+                <div class="spec-content flex items-start justify-between gap-4">
+                  <div class="flex items-start gap-4">
+                    <span class="font-heading font-extrabold text-lg sm:text-xl text-brandSecondary shrink-0 pt-0.5">
+                      09
+                    </span>
+                    <div>
+                      <h3 class="font-heading font-bold text-xl sm:text-[22px] text-brandText mb-1">
+                        Nutrición
+                      </h3>
+                      <p class="text-sm sm:text-base text-brandText opacity-90 leading-normal">
+                        Nutricionistas especialistas en alimentación saludable y control del peso.
+                      </p>
+                    </div>
+                  </div>
+                  <svg class="w-5 h-5 text-brandSecondary shrink-0 mt-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="#5577CE" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </div>
+              </a>
+
+              <!-- 10 Urología -->
+              <a
+                href="https://centromedicobandera.cl/reservo-especialidades-medicas/"
+                class="spec-row block py-4 sm:py-5 px-3 -mx-3 transition-colors group"
+              >
+                <div class="spec-content flex items-start justify-between gap-4">
+                  <div class="flex items-start gap-4">
+                    <span class="font-heading font-extrabold text-lg sm:text-xl text-brandSecondary shrink-0 pt-0.5">
+                      10
+                    </span>
+                    <div>
+                      <h3 class="font-heading font-bold text-xl sm:text-[22px] text-brandText mb-1">
+                        Urología
+                      </h3>
+                      <p class="text-sm sm:text-base text-brandText opacity-90 leading-normal">
+                        Cuidando la salud del sistema urinario y renal.
+                      </p>
+                    </div>
+                  </div>
+                  <svg class="w-5 h-5 text-brandSecondary shrink-0 mt-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="#5577CE" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </div>
+              </a>
+
+              <!-- 11 Nefrología (+15) -->
+              <a
+                href="https://centromedicobandera.cl/reservo-especialidades-medicas/"
+                class="spec-row block py-4 sm:py-5 px-3 -mx-3 transition-colors group"
+              >
+                <div class="spec-content flex items-start justify-between gap-4">
+                  <div class="flex items-start gap-4">
+                    <span class="font-heading font-extrabold text-lg sm:text-xl text-brandSecondary shrink-0 pt-0.5">
+                      11
+                    </span>
+                    <div>
+                      <div class="flex items-center gap-2 flex-wrap mb-1">
+                        <h3 class="font-heading font-bold text-xl sm:text-[22px] text-brandText">
+                          Nefrología
+                        </h3>
+                        <span class="border border-[rgba(72,72,72,0.2)] text-brandText text-xs font-semibold px-2 py-0.5 rounded-full">
+                          +15
+                        </span>
+                      </div>
+                      <p class="text-sm sm:text-base text-brandText opacity-90 leading-normal">
+                        Evaluación y orientación en salud renal (+15).
+                      </p>
+                    </div>
+                  </div>
+                  <svg class="w-5 h-5 text-brandSecondary shrink-0 mt-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="#5577CE" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </div>
+              </a>
+
+              <!-- 12 Salud Mental (18+) -->
+              <a
+                href="https://centromedicobandera.cl/reservo-especialidades-medicas/"
+                class="spec-row block py-4 sm:py-5 px-3 -mx-3 transition-colors group"
+              >
+                <div class="spec-content flex items-start justify-between gap-4">
+                  <div class="flex items-start gap-4">
+                    <span class="font-heading font-extrabold text-lg sm:text-xl text-brandSecondary shrink-0 pt-0.5">
+                      12
+                    </span>
+                    <div>
+                      <div class="flex items-center gap-2 flex-wrap mb-1">
+                        <h3 class="font-heading font-bold text-xl sm:text-[22px] text-brandText">
+                          Salud Mental
+                        </h3>
+                        <span class="border border-[rgba(72,72,72,0.2)] text-brandText text-xs font-semibold px-2 py-0.5 rounded-full">
+                          18+
+                        </span>
+                      </div>
+                      <p class="text-sm sm:text-base text-brandText opacity-90 leading-normal">
+                        Apoyo y orientación para ansiedad, estrés, ánimo bajo e insomnio (18+).
+                      </p>
+                    </div>
+                  </div>
+                  <svg class="w-5 h-5 text-brandSecondary shrink-0 mt-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="#5577CE" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </div>
+              </a>
+
+              <!-- 13 Endocrinología (18+) -->
+              <a
+                href="https://centromedicobandera.cl/reservo-especialidades-medicas/"
+                class="spec-row block py-4 sm:py-5 px-3 -mx-3 transition-colors group"
+              >
+                <div class="spec-content flex items-start justify-between gap-4">
+                  <div class="flex items-start gap-4">
+                    <span class="font-heading font-extrabold text-lg sm:text-xl text-brandSecondary shrink-0 pt-0.5">
+                      13
+                    </span>
+                    <div>
+                      <div class="flex items-center gap-2 flex-wrap mb-1">
+                        <h3 class="font-heading font-bold text-xl sm:text-[22px] text-brandText">
+                          Endocrinología
+                        </h3>
+                        <span class="border border-[rgba(72,72,72,0.2)] text-brandText text-xs font-semibold px-2 py-0.5 rounded-full">
+                          18+
+                        </span>
+                      </div>
+                      <p class="text-sm sm:text-base text-brandText opacity-90 leading-normal">
+                        Evaluación y control de tiroides, metabolismo y hormonas (18+).
+                      </p>
+                    </div>
+                  </div>
+                  <svg class="w-5 h-5 text-brandSecondary shrink-0 mt-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="#5577CE" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </div>
+              </a>
+
+              <!-- 14 Ecografías / Ecotomografías -->
+              <a
+                href="https://centromedicobandera.cl/reservo-especialidades-medicas/"
+                class="spec-row block py-4 sm:py-5 px-3 -mx-3 transition-colors group"
+              >
+                <div class="spec-content flex items-start justify-between gap-4">
+                  <div class="flex items-start gap-4">
+                    <span class="font-heading font-extrabold text-lg sm:text-xl text-brandSecondary shrink-0 pt-0.5">
+                      14
+                    </span>
+                    <div>
+                      <h3 class="font-heading font-bold text-xl sm:text-[22px] text-brandText mb-1">
+                        Ecografías / Ecotomografías
+                      </h3>
+                      <p class="text-sm sm:text-base text-brandText opacity-90 leading-normal">
+                        Apoyo diagnóstico en diversas especialidades médicas.
+                      </p>
+                    </div>
+                  </div>
+                  <svg class="w-5 h-5 text-brandSecondary shrink-0 mt-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="#5577CE" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Enlace secundario: Resultados de ecografía -->
+          <div class="mt-12 text-center">
+            <a
+              href="https://app.dalca.cl/portal/cmd_bandera"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover-lift inline-flex items-center gap-2 text-base font-bold text-brandSecondary hover:text-brandPrimary transition-colors py-2 px-4 rounded-full border border-brandSecondary"
+            >
+              ¿Ya te hiciste una ecografía? Revisa tus resultados
+              <svg class="w-4 h-4 shrink-0" fill="none" stroke="#5577CE" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           SECCIÓN 3 — NOSOTROS
+           ========================================== -->
+      <section id="nosotros" class="bg-brandBg py-16 sm:py-24">
+        <div class="max-w-[1200px] mx-auto px-5">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            <!-- Foto con máscara diagonal (5 cols desktop) -->
+            <div class="lg:col-span-5 order-1 lg:order-1 flex justify-center">
+              <div class="relative w-full max-w-[460px] overflow-hidden rounded-[6px]">
+                <img
+                  src="/images/medicina_home.jpg"
+                  onerror="this.onerror=null; this.src='https://centromedicobandera.cl/wp-content/uploads/medicina_home.jpg';"
+                  alt="Consulta en Centro Médico Bandera, Santiago Centro"
+                  loading="lazy"
+                  width="600"
+                  height="450"
+                  class="w-full h-[320px] sm:h-[400px] object-cover mask-diagonal"
+                />
+              </div>
+            </div>
+
+            <!-- Texto Nosotros (7 cols desktop) -->
+            <div class="lg:col-span-7 order-2 lg:order-2 flex flex-col">
+              <span class="text-xs sm:text-sm font-semibold text-brandSecondary tracking-wider uppercase mb-2 block">
+                Sobre nosotros
+              </span>
+              <h2 class="text-[30px] sm:text-[40px] md:text-[50px] font-extrabold text-brandText tracking-tight mb-5 leading-[1.08]">
+                Comprometidos con el cuidado integral de las personas
+              </h2>
+              <p class="text-base sm:text-lg text-brandText leading-relaxed mb-8">
+                Brindamos asistencia a las comunidades del centro de Santiago y sus alrededores. Nuestra intención es proporcionar atención de salud personalizada y accesible en un solo lugar.
+              </p>
+
+              <!-- 4 puntos con ícono SVG lineal -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 mb-8">
+                <!-- 1 -->
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 rounded-full bg-[rgba(67,175,230,0.12)] flex items-center justify-center shrink-0 mt-0.5">
+                    <svg class="w-4 h-4 text-brandSecondary" fill="none" stroke="#5577CE" stroke-width="1.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <span class="text-base font-semibold text-brandText">
+                    Más de 20 años de experiencia
+                  </span>
+                </div>
+
+                <!-- 2 -->
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 rounded-full bg-[rgba(67,175,230,0.12)] flex items-center justify-center shrink-0 mt-0.5">
+                    <svg class="w-4 h-4 text-brandSecondary" fill="none" stroke="#5577CE" stroke-width="1.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+                    </svg>
+                  </div>
+                  <span class="text-base font-semibold text-brandText">
+                    Atención para niños, jóvenes y adultos
+                  </span>
+                </div>
+
+                <!-- 3 -->
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 rounded-full bg-[rgba(67,175,230,0.12)] flex items-center justify-center shrink-0 mt-0.5">
+                    <svg class="w-4 h-4 text-brandSecondary" fill="none" stroke="#5577CE" stroke-width="1.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z" />
+                    </svg>
+                  </div>
+                  <span class="text-base font-semibold text-brandText">
+                    Prevención, diagnóstico y tratamientos
+                  </span>
+                </div>
+
+                <!-- 4 -->
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 rounded-full bg-[rgba(67,175,230,0.12)] flex items-center justify-center shrink-0 mt-0.5">
+                    <svg class="w-4 h-4 text-brandSecondary" fill="none" stroke="#5577CE" stroke-width="1.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                    </svg>
+                  </div>
+                  <span class="text-base font-semibold text-brandText">
+                    Ambiente cálido y confortable
+                  </span>
+                </div>
+              </div>
+
+              <!-- CTA -->
+              <div>
+                <a
+                  href="https://centromedicobandera.cl/reservo-especialidades-medicas/"
+                  class="hover-lift inline-flex items-center justify-center bg-brandSecondary text-white font-bold text-base px-8 py-3.5 rounded-full transition-transform"
+                >
+                  Agendar hora
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           SECCIÓN 4 — UBICACIÓN Y HORARIOS
+           ========================================== -->
+      <section id="ubicacion" class="bg-brandBgAlt py-16 sm:py-24">
+        <div class="max-w-[1200px] mx-auto px-5">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            <!-- Tarjeta blanca de información (6 cols desktop) -->
+            <div class="lg:col-span-6 bg-brandBg rounded-[14px] p-6 sm:p-10 border border-[rgba(72,72,72,0.10)] flex flex-col justify-between">
+              <div>
+                <span class="text-xs sm:text-sm font-semibold text-brandSecondary tracking-wider uppercase mb-2 block">
+                  Ubicación estratégica
+                </span>
+                <h2 class="text-[28px] sm:text-[38px] font-extrabold text-brandText tracking-tight mb-4 leading-[1.1]">
+                  ¡Estamos en el corazón de Santiago Centro!
+                </h2>
+                <p class="text-lg font-bold text-brandText mb-6 flex items-center gap-2">
+                  <svg class="w-5 h-5 text-brandSecondary shrink-0" fill="none" stroke="#5577CE" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                  </svg>
+                  Bandera 642, 4to Piso
+                </p>
+
+                <!-- Chips de Metro -->
+                <div class="mb-6">
+                  <span class="text-xs text-brandText opacity-75 font-semibold block mb-2 uppercase tracking-wider">
+                    Estaciones de Metro cercanas:
+                  </span>
+                  <div class="flex flex-wrap items-center gap-3">
+                    <!-- Chip Cal y Canto -->
+                    <div class="inline-flex items-center gap-2.5 bg-brandPrimary text-white font-bold text-base px-4 py-2 rounded-full">
+                      <img
+                        src="/logo/logo-metro.png"
+                        onerror="this.onerror=null; this.src='https://centromedicobandera.cl/wp-content/uploads/logotipo-del-metro-de-santiago_blanco.png';"
+                        alt="Metro de Santiago"
+                        class="h-4 w-auto object-contain"
+                        loading="lazy"
+                      />
+                      <span>Cal y Canto</span>
+                    </div>
+
+                    <!-- Chip Plaza de Armas -->
+                    <div class="inline-flex items-center gap-2.5 bg-brandPrimary text-white font-bold text-base px-4 py-2 rounded-full">
+                      <img
+                        src="/logo/logo-metro.png"
+                        onerror="this.onerror=null; this.src='https://centromedicobandera.cl/wp-content/uploads/logotipo-del-metro-de-santiago_blanco.png';"
+                        alt="Metro de Santiago"
+                        class="h-4 w-auto object-contain"
+                        loading="lazy"
+                      />
+                      <span>Plaza de Armas</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Horarios y Diferenciador -->
+                <div class="border-t border-b border-[rgba(72,72,72,0.12)] py-5 mb-6 space-y-2">
+                  <div class="flex items-start gap-2">
+                    <span class="font-bold text-brandText text-base">Horarios:</span>
+                  </div>
+                  <p class="text-base text-brandText">
+                    Lunes a viernes: 09:00 a 19:00 hrs.
+                  </p>
+                  <p class="text-base text-brandText font-semibold">
+                    Sábados: 09:00 a 14:00 hrs.
+                  </p>
+                  <div class="pt-2">
+                    <span class="inline-block bg-brandAccent text-brandText font-bold text-sm px-3 py-1 rounded-full">
+                      Atención de pacientes con o sin RUT.
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Botón Cómo llegar -->
+              <div>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Bandera+642+Santiago"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover-lift inline-flex items-center justify-center gap-2 bg-brandSecondary text-white font-bold text-base px-8 py-3.5 rounded-full transition-transform w-full sm:w-auto"
+                >
+                  <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934a1.12 1.12 0 01-1.006 0L9.503 3.314a1.12 1.12 0 00-1.006 0L3.622 5.75A1.125 1.125 0 003 6.757v12.424c0 .836.88 1.38 1.628 1.005l3.869-1.934a1.12 1.12 0 011.006 0l4.997 2.499a1.12 1.12 0 001.003-.253z" />
+                  </svg>
+                  Cómo llegar
+                </a>
+              </div>
+            </div>
+
+            <!-- Mapa embebido (6 cols desktop) -->
+            <div class="lg:col-span-6 bg-brandBg rounded-[14px] p-2 border border-[rgba(72,72,72,0.10)] flex items-center justify-center overflow-hidden">
+              <iframe
+                title="Ubicación de Centro Médico Bandera en Google Maps"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.51271238377!2d-70.65573882446691!3d-33.43594637339516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5a4c9eb17bd%3A0x517ed675fa3e5513!2sDental%20Bandera!5e0!3m2!1ses!2scl!4v1733510876061!5m2!1ses!2scl"
+                width="100%"
+                height="100%"
+                class="w-full min-h-[300px] sm:min-h-[380px] lg:h-full rounded-[6px]"
+                style="border: 0; min-height: 300px;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           SECCIÓN 5 — AGENDA Y CONTACTO (cierre + footer)
+           ========================================== -->
+      <section id="contacto" class="bg-brandPrimary py-16 sm:py-24">
+        <div class="max-w-[1200px] mx-auto px-5">
+          <!-- Título grande en blanco -->
+          <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+            <h2 class="text-white font-extrabold text-[32px] sm:text-[46px] md:text-[56px] tracking-tight leading-[1.08] mb-4">
+              ¿Cómo quieres agendar?
+            </h2>
+            <p class="text-white text-base sm:text-lg opacity-95">
+              Elige la opción más cómoda para ti y asegura tu atención médica o dental en segundos.
+            </p>
+          </div>
+
+          <!-- 3 Tarjetas Blancas (flex expandible en escritorio, apiladas en móvil) -->
+          <div class="grid grid-cols-1 lg:flex gap-6 mb-16">
+            <!-- Tarjeta 1: Agenda médica -->
+            <div class="expand-card bg-brandBg rounded-[14px] p-6 sm:p-8 border border-[rgba(72,72,72,0.10)] flex flex-col justify-between">
+              <div>
+                <div class="w-12 h-12 rounded-full bg-[rgba(67,175,230,0.12)] flex items-center justify-center mb-5">
+                  <svg class="w-6 h-6 text-brandSecondary" fill="none" stroke="#5577CE" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                  </svg>
+                </div>
+                <h3 class="font-heading font-bold text-2xl text-brandText mb-2">
+                  Agenda médica
+                </h3>
+                <p class="text-brandText text-sm sm:text-base leading-relaxed mb-6">
+                  Reserva tu consulta de medicina general FONASA Nivel 1 o con nuestros especialistas médicos.
+                </p>
+              </div>
+              <div>
+                <a
+                  href="https://centromedicobandera.cl/reservo-especialidades-medicas/"
+                  class="hover-lift inline-flex items-center justify-center w-full bg-brandSecondary text-white font-bold text-base px-6 py-3.5 rounded-full transition-transform"
+                >
+                  Agendar hora médica
+                </a>
+              </div>
+            </div>
+
+            <!-- Tarjeta 2: Agenda dental -->
+            <div class="expand-card bg-brandBg rounded-[14px] p-6 sm:p-8 border border-[rgba(72,72,72,0.10)] flex flex-col justify-between">
+              <div>
+                <div class="w-12 h-12 rounded-full bg-[rgba(67,175,230,0.12)] flex items-center justify-center mb-5">
+                  <svg class="w-6 h-6 text-brandSecondary" fill="none" stroke="#5577CE" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+                  </svg>
+                </div>
+                <div class="flex items-center gap-2 flex-wrap mb-2">
+                  <h3 class="font-heading font-bold text-2xl text-brandText">
+                    Agenda dental
+                  </h3>
+                  <span class="bg-brandAccent text-brandText font-semibold text-xs px-2 py-0.5 rounded-full">
+                    Costo cero
+                  </span>
+                </div>
+                <p class="text-brandText text-sm sm:text-base leading-relaxed mb-6">
+                  Evaluación costo cero en odontología y todas las subespecialidades para niños y adultos.
+                </p>
+              </div>
+              <div>
+                <a
+                  href="https://centromedicobandera.cl/agenda-tu-hora-dental/"
+                  class="hover-lift inline-flex items-center justify-center w-full bg-brandSecondary text-white font-bold text-base px-6 py-3.5 rounded-full transition-transform"
+                >
+                  Agendar hora dental
+                </a>
+              </div>
+            </div>
+
+            <!-- Tarjeta 3: WhatsApp -->
+            <div class="expand-card bg-brandBg rounded-[14px] p-6 sm:p-8 border border-[rgba(72,72,72,0.10)] flex flex-col justify-between">
+              <div>
+                <div class="w-12 h-12 rounded-full bg-[rgba(139,202,153,0.25)] flex items-center justify-center mb-5">
+                  <svg class="w-6 h-6 text-brandText" fill="none" stroke="#484848" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
+                  </svg>
+                </div>
+                <h3 class="font-heading font-bold text-2xl text-brandText mb-2">
+                  WhatsApp
+                </h3>
+                <p class="text-brandText text-sm sm:text-base leading-relaxed mb-6">
+                  Escríbenos directamente y nuestro equipo coordinará tu cita personalizada al instante.
+                </p>
+              </div>
+              <div>
+                <a
+                  href="https://wa.me/56974102135?text=Hola%20Centro%20M%C3%A9dico%20Bandera%2C%20quiero%20agendar%20una%20hora"
+                  class="hover-lift inline-flex items-center justify-center gap-2 w-full bg-brandAccent text-brandText font-bold text-base px-6 py-3.5 rounded-full transition-transform"
+                >
+                  <svg class="w-5 h-5 shrink-0" fill="none" stroke="#484848" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
+                  </svg>
+                  Escribir por WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formulario de contacto dentro de una tarjeta blanca -->
+          <div class="max-w-xl mx-auto bg-brandBg rounded-[14px] p-6 sm:p-10 border border-[rgba(72,72,72,0.10)] mb-16">
+            <div class="text-center mb-6">
+              <span class="text-xs font-semibold text-brandSecondary tracking-wider uppercase block mb-1">
+                Atención rápida
+              </span>
+              <h3 class="font-heading font-bold text-2xl sm:text-3xl text-brandText">
+                ¿Prefieres que te contactemos?
+              </h3>
+            </div>
+
+            <form id="appointment-form" class="space-y-4" novalidate>
+              <!-- Nombre -->
+              <div>
+                <label for="form-name" class="block text-sm font-semibold text-brandText mb-1.5">
+                  Nombre completo *
+                </label>
+                <input
+                  type="text"
+                  id="form-name"
+                  name="name"
+                  required
+                  placeholder="Ej. Constanza Morales"
+                  class="w-full px-4 py-3 rounded-lg border border-[rgba(72,72,72,0.2)] bg-brandBg text-brandText focus:outline-none focus:border-brandSecondary transition-colors"
+                />
+                <p id="name-error" class="text-xs text-brandSecondary font-medium mt-1 hidden">
+                  Por favor ingresa tu nombre.
+                </p>
+              </div>
+
+              <!-- Especialidad (14 opciones) -->
+              <div>
+                <label for="form-specialty" class="block text-sm font-semibold text-brandText mb-1.5">
+                  Especialidad
+                </label>
+                <select
+                  id="form-specialty"
+                  name="specialty"
+                  class="w-full px-4 py-3 rounded-lg border border-[rgba(72,72,72,0.2)] bg-brandBg text-brandText focus:outline-none focus:border-brandSecondary transition-colors cursor-pointer"
+                >
+                  <option value="Medicina General">Medicina General</option>
+                  <option value="Odontología">Odontología</option>
+                  <option value="Dermatología">Dermatología</option>
+                  <option value="Gastroenterología">Gastroenterología</option>
+                  <option value="Cardiología">Cardiología</option>
+                  <option value="Otorrinolaringología">Otorrinolaringología</option>
+                  <option value="Ginecología">Ginecología</option>
+                  <option value="Ecografía ginecológica">Ecografía ginecológica</option>
+                  <option value="Nutrición">Nutrición</option>
+                  <option value="Urología">Urología</option>
+                  <option value="Nefrología">Nefrología (+15)</option>
+                  <option value="Salud Mental">Salud Mental (18+)</option>
+                  <option value="Endocrinología">Endocrinología (18+)</option>
+                  <option value="Ecografías / Ecotomografías">Ecografías / Ecotomografías</option>
+                </select>
+              </div>
+
+              <!-- Día preferido (Lunes a Sábado) -->
+              <div>
+                <label for="form-day" class="block text-sm font-semibold text-brandText mb-1.5">
+                  Día preferido
+                </label>
+                <select
+                  id="form-day"
+                  name="day"
+                  class="w-full px-4 py-3 rounded-lg border border-[rgba(72,72,72,0.2)] bg-brandBg text-brandText focus:outline-none focus:border-brandSecondary transition-colors cursor-pointer"
+                >
+                  <option value="Lunes">Lunes (09:00 a 19:00 hrs)</option>
+                  <option value="Martes">Martes (09:00 a 19:00 hrs)</option>
+                  <option value="Miércoles">Miércoles (09:00 a 19:00 hrs)</option>
+                  <option value="Jueves">Jueves (09:00 a 19:00 hrs)</option>
+                  <option value="Viernes">Viernes (09:00 a 19:00 hrs)</option>
+                  <option value="Sábado">Sábado (09:00 a 14:00 hrs)</option>
+                </select>
+              </div>
+
+              <!-- Mensaje opcional -->
+              <div>
+                <label for="form-message" class="block text-sm font-semibold text-brandText mb-1.5">
+                  Mensaje opcional
+                </label>
+                <textarea
+                  id="form-message"
+                  name="message"
+                  rows="3"
+                  placeholder="Horario de preferencia o consulta adicional..."
+                  class="w-full px-4 py-3 rounded-lg border border-[rgba(72,72,72,0.2)] bg-brandBg text-brandText focus:outline-none focus:border-brandSecondary transition-colors resize-none"
+                ></textarea>
+              </div>
+
+              <!-- Botón Enviar por WhatsApp -->
+              <div class="pt-2">
+                <button
+                  type="submit"
+                  class="hover-lift w-full bg-brandAccent text-brandText font-bold text-base py-3.5 px-6 rounded-full flex items-center justify-center gap-2 cursor-pointer transition-transform"
+                >
+                  <svg class="w-5 h-5 shrink-0" fill="none" stroke="#484848" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
+                  </svg>
+                  Enviar por WhatsApp
+                </button>
+              </div>
+
+              <p class="text-xs text-brandText text-center opacity-80 pt-1">
+                Te responderemos por WhatsApp para confirmar tu hora.
+              </p>
+            </form>
+          </div>
+
+          <!-- Footer dentro de la sección sobre fondo blanco -->
+          <footer class="bg-brandBg rounded-[14px] p-8 sm:p-12 border border-[rgba(72,72,72,0.10)]">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start mb-10">
+              <!-- Columna 1: Logo y Lema -->
+              <div class="md:col-span-4 flex flex-col items-start">
+                <img
+                  src="/logo/logo-footer.svg"
+                  onerror="this.onerror=null; this.src='https://dentalbandera.cl/web/wp-content/uploads/LOGO_CMDB.svg';"
+                  alt="Logo Centro Médico Bandera"
+                  class="h-12 w-auto mb-3"
+                  loading="lazy"
+                />
+                <p class="font-heading font-bold text-lg text-brandText mb-2">
+                  «Tu Salud, nuestra bandera.»
+                </p>
+                <p class="text-sm text-brandText opacity-80">
+                  Bandera 642, 4to Piso, Santiago Centro.
+                </p>
+              </div>
+
+              <!-- Columna 2: Horarios y Contacto -->
+              <div class="md:col-span-5 flex flex-col space-y-2">
+                <span class="text-xs font-bold uppercase tracking-wider text-brandSecondary">
+                  Horarios de Atención
+                </span>
+                <p class="text-sm text-brandText">
+                  Lunes a viernes: 09:00 a 19:00 hrs.
+                </p>
+                <p class="text-sm text-brandText">
+                  Sábados: 09:00 a 14:00 hrs.
+                </p>
+                <div class="pt-2 flex flex-col space-y-1">
+                  <a href="tel:+56974102135" class="text-sm font-semibold text-brandText hover:text-brandSecondary transition-colors">
+                    Teléfono y WhatsApp: +56 9 7410 2135
+                  </a>
+                  <a href="mailto:contacto@centromedicobandera.cl" class="text-sm text-brandText hover:text-brandSecondary transition-colors">
+                    Correo: contacto@centromedicobandera.cl
+                  </a>
+                </div>
+              </div>
+
+              <!-- Columna 3: Redes Sociales -->
+              <div class="md:col-span-3 flex flex-col items-start md:items-end">
+                <span class="text-xs font-bold uppercase tracking-wider text-brandSecondary mb-3">
+                  Síguenos
+                </span>
+                <div class="flex items-center gap-3">
+                  <!-- Instagram -->
+                  <a
+                    href="https://www.instagram.com/centromedicobandera"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="w-10 h-10 rounded-full bg-brandBgAlt flex items-center justify-center text-brandText hover:text-brandSecondary hover:bg-[rgba(67,175,230,0.15)] transition-colors"
+                    aria-label="Instagram Centro Médico Bandera"
+                  >
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </a>
+
+                  <!-- Facebook -->
+                  <a
+                    href="https://www.facebook.com/centromedicobandera"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="w-10 h-10 rounded-full bg-brandBgAlt flex items-center justify-center text-brandText hover:text-brandSecondary hover:bg-[rgba(67,175,230,0.15)] transition-colors"
+                    aria-label="Facebook Centro Médico Bandera"
+                  >
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+                    </svg>
+                  </a>
+
+                  <!-- TikTok -->
+                  <a
+                    href="https://www.tiktok.com/@centromedicobandera"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="w-10 h-10 rounded-full bg-brandBgAlt flex items-center justify-center text-brandText hover:text-brandSecondary hover:bg-[rgba(67,175,230,0.15)] transition-colors"
+                    aria-label="TikTok Centro Médico Bandera"
+                  >
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12a4 4 0 104 4V4a5 5 0 005 5" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Medios de Pago (texto plano) -->
+            <div class="border-t border-[rgba(72,72,72,0.12)] pt-6 pb-6 text-center md:text-left">
+              <p class="text-xs sm:text-sm text-brandText opacity-85">
+                <span class="font-bold">Medios de pago:</span> Webpay, Redcompra, Visa, Mastercard, Maestro, Diners Club, Google Pay y Apple Pay.
+              </p>
+            </div>
+
+            <!-- Línea inferior legal -->
+            <div class="border-t border-[rgba(72,72,72,0.12)] pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-brandText opacity-75">
+              <p>© 2026 Centro Médico Bandera. Todos los derechos reservados.</p>
+              <a
+                href="https://centromedicobandera.cl/politicas-de-privacidad/"
+                class="hover:text-brandSecondary transition-colors underline"
+              >
+                Políticas de privacidad
+              </a>
+            </div>
+          </footer>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==========================================
+         BARRA FIJA EN MÓVIL (<768px)
+         ========================================== -->
+    <div
+      class="fixed bottom-0 left-0 right-0 z-40 bg-brandBg border-t border-[rgba(72,72,72,0.12)] p-2.5 md:hidden"
+      style="padding-bottom: max(10px, env(safe-area-inset-bottom));"
+      aria-label="Acciones rápidas"
+    >
+      <div class="grid grid-cols-2 gap-2.5 max-w-md mx-auto">
+        <!-- Agendar hora -->
+        <a
+          href="https://centromedicobandera.cl/reservo-especialidades-medicas/"
+          class="flex items-center justify-center min-h-[48px] bg-brandSecondary text-white font-bold text-sm px-3 rounded-full transition-transform active:scale-95"
+        >
+          Agendar hora
+        </a>
+
+        <!-- WhatsApp -->
+        <a
+          href="https://wa.me/56974102135?text=Hola%20Centro%20M%C3%A9dico%20Bandera%2C%20quiero%20agendar%20una%20hora"
+          class="flex items-center justify-center gap-1.5 min-h-[48px] bg-brandAccent text-brandText font-bold text-sm px-3 rounded-full transition-transform active:scale-95"
+        >
+          <svg class="w-4 h-4 shrink-0" fill="none" stroke="#484848" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
+          </svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         BOTÓN FLOTANTE DE WHATSAPP EN ESCRITORIO (≥768px)
+         ========================================== -->
+    <a
+      href="https://wa.me/56974102135?text=Hola%20Centro%20M%C3%A9dico%20Bandera%2C%20quiero%20agendar%20una%20hora"
+      class="hover-lift hidden md:flex items-center gap-2 fixed bottom-6 right-6 z-40 bg-brandAccent text-brandText font-bold text-base px-5 py-3 rounded-full border border-[rgba(72,72,72,0.12)] transition-transform"
+      aria-label="Contactar por WhatsApp"
+    >
+      <svg class="w-5 h-5 shrink-0" fill="none" stroke="#484848" stroke-width="1.5" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
+      </svg>
+      <span>WhatsApp</span>
+    </a>
+
+    <!-- ==========================================
+         JAVASCRIPT VANILLA
+         ========================================== -->
+    <script>
+      (function() {
+        // 1. Barra de progreso de scroll
+        var progressBar = document.getElementById('scroll-progress');
+        var mainHeader = document.getElementById('main-header');
+
+        function onScroll() {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          if (docHeight > 0) {
+            var progress = (scrollTop / docHeight) * 100;
+            progressBar.style.width = progress + '%';
+          }
+
+          // 2. Header blur y fondo al hacer scroll
+          if (scrollTop > 20) {
+            mainHeader.classList.add('header-scrolled');
+          } else {
+            mainHeader.classList.remove('header-scrolled');
+          }
+        }
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+
+        // 3. Formulario de contacto hacia WhatsApp
+        var form = document.getElementById('appointment-form');
+        var nameInput = document.getElementById('form-name');
+        var nameError = document.getElementById('name-error');
+        var specialtySelect = document.getElementById('form-specialty');
+        var daySelect = document.getElementById('form-day');
+        var messageText = document.getElementById('form-message');
+
+        if (form) {
+          form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var nameVal = nameInput.value.trim();
+
+            if (!nameVal) {
+              nameError.classList.remove('hidden');
+              nameInput.classList.add('border-brandSecondary');
+              nameInput.focus();
+              return;
+            }
+
+            nameError.classList.add('hidden');
+            nameInput.classList.remove('border-brandSecondary');
+
+            var specialtyVal = specialtySelect.value;
+            var dayVal = daySelect.value;
+            var messageVal = messageText.value.trim();
+
+            var textMsg = 'Hola Centro Médico Bandera, soy ' + nameVal + '. Quiero agendar ' + specialtyVal + ' para el ' + dayVal + '.';
+            if (messageVal) {
+              textMsg += ' ' + messageVal;
+            }
+
+            var waUrl = 'https://wa.me/56974102135?text=' + encodeURIComponent(textMsg);
+            window.open(waUrl, '_blank');
+          });
+
+          nameInput.addEventListener('input', function() {
+            if (nameInput.value.trim()) {
+              nameError.classList.add('hidden');
+              nameInput.classList.remove('border-brandSecondary');
+            }
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
